@@ -23,6 +23,12 @@
   - 评估模块
 - **/predict.py**
   - 预测模块
+## 权重（目前已测试的权重）
+- Google原版bert: https://github.com/google-research/bert
+- brightmart版roberta: https://github.com/brightmart/roberta_zh
+- 哈工大版roberta: https://github.com/ymcui/Chinese-BERT-wwm
+- Google原版albert: https://github.com/google-research/ALBERT
+- 华为的NEZHA: https://github.com/huawei-noah/Pretrained-Language-Model/tree/master/NEZHA-TensorFlow
 
 ## Requirements
 ```
