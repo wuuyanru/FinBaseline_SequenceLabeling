@@ -3,7 +3,7 @@ split_ratio: "9:1"                                                          # �
 random_seed: 42                                                             # 随机数种子
 dict_path: "pre-train_models/nezha_base/vocab.txt"                          # 分词器字典路径
 maxlen: 256                                                                 # 每条数据最大长度
-rdrop_number: 2                                                             # r-drop参数，>=1；当值为1时，不采取r-drop策略
+rdrop_number: 2                                                             # r-drop参数，2；当值为1时，不采取r-drop策略
 batch_size: 6                                                               # 当rdrop_number参数不为1时，该值取双数
 pretrain_config_path: "pre-train_models/nezha_base/bert_config.json"        # 预训练模型配置文件
 pretrain_checkpoint_path: "pre-train_models/nezha_base/model.ckpt-900000"   # 保存的预训练模型路径
@@ -17,12 +17,12 @@ learning_rate: 2e-5                                                         # �
 exclude_from_weight_decay: ['Norm', 'bias']                                 # 权重衰减排除项
 paramwise_lr_schedule: {'bidirectional_1':200}                              # 分参数学习率调整参数，字典形式
 ema_momentum: 0.999                                                         # 动量参数
-eplison: 0.5                                                                # 对抗训练约束因子，>=0；当值为0时，不采用对抗策略
+eplison: 0.5                                                                # 对抗训练（FGM）约束因子，>=0；当值为0时，不采用对抗策略
 log_path: "./"                                                              # 日志文件保存文件夹
 log_name: "bert_bilstm_crf"                                                 # 日志文件名（代码中会自动拼接日期，并保存为txt文件）
-best_path: "best_model_bert_bilstm_crf.hdf5"                                # 训练最优模型保存路径
+best_path: "best_model_bert_bilstm_crf.weights"                             # 训练最优模型保存路径
 epochs: 20                                                                  # 训练代数
-model_path: "best_model_bert_bilstm_crf.hdf5"                               # 评估、预测时加载模型路径
+model_path: "best_model_bert_bilstm_crf.weights"                            # 评估、预测时加载模型路径
 test_data: "dataset/train_data.txt"                                         # 测试数据集路径
 predict_data: "dataset/predict_data.txt"                                    # 预测数据路径
 predict_path: "dataset/predict_results.txt"                                 # 预测结果保存路径
