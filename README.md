@@ -15,7 +15,6 @@
   - softmax
   - global_pointer
   - span
-  - 
 - **/config.yaml**
   - 本项目配置文件，所有参数均已注释
 - **/train.py**
@@ -33,6 +32,7 @@ Keras==2.3.1
 PyYAML==6.0
 tensorflow-gpu==1.15.X
 tqdm==4.62.3
+h5py==2.10.0
 ```
 可以通过命令`pip install -r requirements.txt`批量安装所需包。
 
