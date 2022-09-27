@@ -15,6 +15,7 @@
   - softmax
   - global_pointer
   - span
+  - 更多预训练模型、更多模型结构、更多训练trick，敬请期待
 - **/config.yaml**
   - 本项目配置文件，所有参数均已注释
 - **/train.py**
